@@ -12,12 +12,12 @@
     Console.Write("]");
 }
 
-int searchStringsWithSizeLessOrEqual3(string[] stringArray)
+int searchStringsWithSizeLessOrEqual4(string[] stringArray)
 {
     int numberOfStrings = 0;
     for (int i=0; i<stringArray.Length; i++)
     {
-        if (stringArray[i].Length <= 3)
+        if (stringArray[i].Length <= 4)
         {
             numberOfStrings++;
         }
@@ -25,13 +25,13 @@ int searchStringsWithSizeLessOrEqual3(string[] stringArray)
     return numberOfStrings;
 }
 
-string[] createArrayWithSizeLessOrEqual3(string[] stringArray, int sizeNewArray)
+string[] createArrayWithSizeLessOrEqual4(string[] stringArray, int sizeNewArray)
 {
     string[] newStringArray = new string[sizeNewArray];
     int j=0;
     for (int i=0; i<stringArray.Length; i++)
     {
-        if (stringArray[i].Length <= 3)
+        if (stringArray[i].Length <= 4)
         {
             newStringArray[j] = stringArray[i];
             j++;
@@ -40,10 +40,10 @@ string[] createArrayWithSizeLessOrEqual3(string[] stringArray, int sizeNewArray)
     return newStringArray;
 }
 
-string[] stringArray = { "C#", "Python", "Java", "C++", "SQL" };
+string[] stringArray = { "Rome", "Rio", "Moscow", "Austin", "Brno" };
 PrintStringArray(stringArray);
-int sortedNewArray = searchStringsWithSizeLessOrEqual3(stringArray);
-string[] newStringArray = createArrayWithSizeLessOrEqual3(stringArray, sortedNewArray);
+int sortedNewArray = searchStringsWithSizeLessOrEqual4(stringArray);
+string[] newStringArray = createArrayWithSizeLessOrEqual4(stringArray, sortedNewArray);
 Console.Write(" => ");
 PrintStringArray(newStringArray);
 Console.WriteLine();
